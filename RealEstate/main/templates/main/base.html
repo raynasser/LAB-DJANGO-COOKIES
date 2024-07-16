@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+    <!-- class="{% if theme == 'light' %}light-mode{% endif %}"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealEstate - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body data-theme="{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}">
+    <header>
+    
+    {% block background %}
+    {% endblock %}
+    
+        <!-- <img src="{% static 'images/skyscraper.jpeg' %}" /> -->
+    
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">HOME</div>
+
+            <div class="nav">
+                <ul class="menu">
+                    <li><a href="{% url 'main:home' %}">Home</a></li>
+                    <li><a href="{% url 'main:properties' %}">Properties</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="{% url 'main:contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="actions">
+                <a href="#"><span class="material-symbols-outlined">person</span></a>
+                <a href="#">Sign up</a>
+                <a href="{% url 'main:toggle_theme' %}" class="theme-toggle">
+                    <span class="material-symbols-outlined sun-icon">wb_sunny</span>
+                    <span class="material-symbols-outlined moon-icon">dark_mode</span>
+                </a>
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <!-- {% block menu-content %}
+        {% endblock %} -->
+
+    </div>
+    </header>
+</body>
+</html>
+
+

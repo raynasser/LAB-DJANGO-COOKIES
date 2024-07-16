@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block background %}
+{% if  'mode' in request.COOKIES %}
+ <div class="background-image" style="background-image: url('/static/images/skyscraper-dark.jpg');"></div>
+{% else %}
+ <div class="background-image" style="background-image: url('/static/images/skyscraper.jpeg');"></div>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="intro">
+        <h1>FIND YOUR DREAMS</h1>
+        <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+        <a href="{% url 'main:properties' %}"><button>Explore Properties</button></a>
+    </section>
+
+
+    <div class="menu-bar">
+        <div class="menu-item home">
+            <a href="#"><span class="material-symbols-outlined menu-icons home-icon">home</span></a>
+            <p>HOME</p>
+        </div>
+        <div class="menu-item properties">
+            <a href="#"><span class="material-symbols-outlined menu-icons factory-icon">factory</span></a>
+            <p>PROPERTIES</p>
+        </div>
+        <div class="menu-item hotel">
+            <a href="#"><span class="material-symbols-outlined menu-icons hotel-icon">hotel</span></a>
+            <p>HOTEL</p>
+        </div>
+        <div class="menu-item villa">
+            <a href="#"><span class="material-symbols-outlined menu-icons villa-icon">villa</span></a>
+            <p>VILLA</p>
+        </div>
+    </div> 
+</main>
+
+{% endblock %}
+  

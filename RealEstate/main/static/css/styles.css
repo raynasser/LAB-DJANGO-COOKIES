@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Phudu', cursive;
+    box-sizing: border-box;
+    color: #1f1f1f;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 12rem;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.nav .menu {
+    list-style: none;
+    display: flex;
+    column-gap: 3rem;
+    background-color: #fafafa;
+    color: black;
+    padding: 2rem 7rem;
+    align-items: center;
+    border-radius: 70px;
+    align-content: center;
+}
+
+.nav .menu li {
+    margin: 0 10px;
+}
+
+.nav .menu li a {
+    color: inherit;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.logo {
+    font-family: 'Phudu';
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions span,
+.actions a {
+    margin-right: 10px;
+    color: black;
+    position: relative;
+    text-decoration: none;
+}
+
+.actions .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.actions .theme-toggle .sun-icon,
+.actions .theme-toggle .moon-icon {
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 4px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.actions .theme-toggle .sun-icon {
+    background-color: white;
+    color: black;
+    position: absolute;
+    right: 24px; /* Adjust this to position correctly */
+}
+
+.actions .theme-toggle .moon-icon {
+    background-color: transparent;
+    color: black;
+}
+
+body.light-mode .actions .theme-toggle .sun-icon {
+    background-color: white;
+    color: black;
+}
+
+body.light-mode .actions .theme-toggle .moon-icon {
+    background-color: transparent;
+    color: black;
+}
+
+body.dark-mode .actions .theme-toggle .sun-icon {
+    background-color: transparent;
+    color: black;
+}
+
+body.dark-mode .actions .theme-toggle .moon-icon {
+    background-color: white;
+    color: black;
+}
+
+body.light-mode .actions span,
+body.light-mode .actions a {
+    color: black;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    text-align: left;
+    width: 50%;
+    gap: 1rem;
+    padding-top: 5rem;
+}
+
+.intro h1 {
+    font-size: 9rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.intro button {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    column-gap: 5rem;
+    background-color: #fafafa;
+    color: black;
+    padding: 1.3rem 2rem;
+    border-radius: 70px;
+    width: 50%;
+    margin-top: 1.3rem;
+    margin-left: 25%;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.material-symbols-outlined.home-icon {
+    background-color: #bcffa2b0;
+    color: rgb(99, 198, 0);
+}
+
+.home p {
+    font-family: 'Phudu', sans-serif;
+    color: rgb(99, 198, 0);
+}
+
+.material-symbols-outlined.factory-icon {
+    background-color: #f0bf91b0;
+    color: rgb(193, 146, 4);
+}
+
+.properties p {
+    font-family: 'Phudu', sans-serif;
+    color: rgb(193, 146, 4);
+}
+
+.material-symbols-outlined.hotel-icon {
+    background-color: #f2aaf2b0;
+    color: rgb(189, 92, 154);
+}
+
+.hotel p {
+    font-family: 'Phudu', sans-serif;
+    color: rgb(189, 92, 154);
+}
+
+.material-symbols-outlined.villa-icon {
+    background-color: #787effb0;
+    color: rgb(4, 17, 193);
+}
+
+.villa p {
+    font-family: 'Phudu', sans-serif;
+    color: rgb(60, 68, 175);
+}
+
+.property-list {
+    padding: 20px;
+    text-align: center;
+}
+
+.property-list h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.properties {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.property {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.property img {
+    width: 100%;
+    height: auto;
+}
+
+.property-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.property-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.property-info button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.property:hover {
+    transform: scale(1.05);
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.light-mode header {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-mode .background-image {
+    background: url('{% static "images/skyscraper.jpeg" %}') no-repeat center center/cover;
+}
+
+body.dark-mode .background-image {
+    background: url('{% static "images/skyscraper-dark.jpg" %}') no-repeat center center/cover;
+}
+

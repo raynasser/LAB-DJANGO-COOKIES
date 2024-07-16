@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block background %}
+{% if  'mode' in request.COOKIES %}
+ <div class="background-image" style="background-image: url('/static/images/skyscraper-dark.jpg');"></div>
+{% else %}
+ <div class="background-image" style="background-image: url('/static/images/skyscraper.jpeg');"></div>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
